@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracebility Flowchart</title>
+</head>
+<body>
+    <center><h3>RES Tracebility Flowchart</h3></center>
+
+    <pre class="mermaid">
+        graph LR;
+
+        Battery
+            Battery --- n1["Tig Welding
+            Input: STC-34-ZZ
+            output BAT-09-ZZ"]
+            n1 --- n2["Placing Stack in Container
+            Input: P77-01-ZZ, P81-01-ZZ
+            Output: STC-34-ZZ"]
+            n2 --- n3["Stack Assembly
+            Output: P77-01-ZZ"]
+            n2 --- n4["Container Assembly
+            Output P81-01-ZZ"]
+            n3 --- n5["Stack Dying"]
+            n5 --- n6["Stack Insulation Wrap"]
+            n6 --- n7["Spot Welding"]
+            n7 --- n8["Stack
+            Output: P77-13-ZZ"]
+            n4 --- n9["Drying"]
+            n9 --- n10["Container Assembly
+            Output: P81-34-ZZ"]
+            n8 --- n11["Cathode Pellets"]
+            n8 --- n12["Anode Pellets"]
+            n8 --- n13["Heat Pellets"]
+            n8 --- n14["Electrolyte Pellets"]
+            n8 --- n15["Lid"]
+            n8 --- n16["Dried Passive Components"]
+            n11 --- n17["DRying of pellets"]
+            n17 --- n18["Pellet Manufacturing"]
+            n12 --- n19["Pellet Manufacturing"]
+            n19 --- n20["Powder Weighing"]
+            n13 --- n21["Drying of pellets"]
+            n21 --- n22["Pellet Manufacturing"]
+            n14 --- n23["Drying"]
+            n23 --- n24["Pellet Manufacturing"]
+            n15 --- n25["Drying"]
+            n25 --- n26["Lid Assembly-B"]
+            n16 --- n27["Drying"]
+            n10 --- n28["Drying of Container"]
+            n10 --- n29["Samica Disc."]
+            n10 --- n30["Container Insulation Wrap"]
+            n10 --- n31["Fibre Frax Disc."]
+            n10 --- n32["Silica Bonded Housing"]
+            n28 --- n33["Drying"]
+            n33 --- n34["Cutting of disc."]
+            n29 --- n35["Drying"]
+            n35 --- n36["Cutting of disc."]
+        
+        
+
+        
+    
+    </pre>
+
+    <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</body>
+</html>
